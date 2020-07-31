@@ -1,0 +1,30 @@
+*{
+    font-family: monospace;
+    text-transform: lowercase;
+}
+
+nav{
+    height: 2vh;
+    margin-left: 18vw;
+}
+
+body{
+    background: rgb(192, 115, 107);
+}
+
+#content{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    border: white 2px solid;
+}
+
+#right-col{
+    display: flex;
+    justify-content: center;
+    margin-left: 10vw;
+    flex-direction: column;
+    width: 45vw;
+}
