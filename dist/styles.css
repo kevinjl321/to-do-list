@@ -18,7 +18,7 @@ body{
     justify-content: center;
     flex-direction: row;
     width: 100vw;
-    border: white 2px solid;
+    border: white 5px solid;
 }
 
 #right-col{
