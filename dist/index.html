@@ -1,33 +1,74 @@
 <!DOCTYPE html>
-
-<html>
-   <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type="text/css" href="../dist/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+        <title>To-Do List</title>
     </head>
-
     <body>
-        <navbar>
-            <h1>todo list</h1>
-        </navbar>
-        <div id = "content">
-            <div id = "left-col">
-                <h1>Projects</h1>
-                <button id = "new-project-btn">New Project</button>
+        <div class="appContainer">
+            <header>
+                <h2>To-Do</h2>
+            </header>
+            <div class="contentContainer">
+                <aside>
+                    <h2>Projects</h2>
+                    <div class="sideBarContainer">
+                        <ul class="projectList">
+                            <li id="allTasks">Home</li>
+                        <!--Add projects here-->
+                        </ul>
+                        <div class="addProjectContainer">
+                            <span class ="addClick" id="addProjectButton">+</span>
+                            <input id ="addProjectForm" type ="text" placeholder="Add a project...">
+                        </div>
+                    </div>
+                </aside>
+                <main>
+                    <h2>To-Do Items</h2>
+                    <div class="listTasksContainer">
+                        <div class="addTaskContainer">
+                            <button class="addClick"id ="addTaskButton">+ Add Task</button>
+                        </div>
+                        <table class="todoTasks">
+                            <tbody id='tbody'>
+                                <!--add todo tasks here-->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="addTaskWindowContainer">
+                        
+                        <div id="taskWindow" >
+                            <header id="cancelBar"> <span id="cancel">x</span></header>
+                            <form id="tasksForm">
+                                <label>Task Name:</label>
+                                    <input class ="windowInputFields" id="taskName" type="text">
+                                <label>Project Folder:</label>
+                                    <select class ="windowSelectFields" id="projectFolder"></select>
+                                <label>Description:</label>
+                                    <input class ="windowInputFields" id="taskDescription" type="text">
+                                <label>Due Date:</label>
+                                    <input class ="windowInputFields" id="dueDate" type="date">
+                                <label>Priority:</label>
+                                    <select class ="windowSelectFields" id="priority">
+                                        <option id ="low" value="low">Low</option>
+                                        <option id ="medium" value="medium">Medium</option>
+                                        <option id ="high" value="high">High</option>
+                                    </select>
+                                <label>Notes:</label>
+                                <textarea id="taskNotes" type="text"></textarea>
+                                <button class="taskWindowButtons" id="saveButton" type="button">Save</button>
+                                <button class="taskWindowButtons" id="submitButton" type="button">New Task</button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+                
             </div>
-            <div id = "right-col">
-                <h1>Tasks</h1>
-                <div id = "task">
-                    <button id = "new-task-btn">+</button>
-                </div>
-            </div>
-        </div>
+        </div>  
     </body>
-
-    <script src = 'main.js'></script>
-    
+    <script src="main.js"></script>
 </html>
